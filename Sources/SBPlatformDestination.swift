@@ -77,12 +77,13 @@ public class SBPlatformDestination: BaseDestination {
     let isoDateFormatter = DateFormatter()
 
     /// init platform with default internal filenames
-    public init(appID: String, appSecret: String, encryptionKey: String,
+    public init(_ label: String? = nil,
+                appID: String, appSecret: String, encryptionKey: String,
                 serverURL: URL? = URL(string: "https://api.swiftybeaver.com/api/entries/"),
                 entriesFileName: String = "sbplatform_entries.json",
                 sendingfileName: String = "sbplatform_entries_sending.json",
                 analyticsFileName: String = "sbplatform_analytics.json") {
-        super.init()
+        super.init(label)
         self.serverURL = serverURL
         self.appID = appID
         self.appSecret = appSecret

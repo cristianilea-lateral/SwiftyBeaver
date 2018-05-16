@@ -17,7 +17,7 @@ public class FileDestination: BaseDestination {
     let fileManager = FileManager.default
     var fileHandle: FileHandle?
 
-    public override init() {
+    public override init(_ label: String? = nil) {
         // platform-dependent logfile directory default
         var baseURL: URL?
         #if os(OSX)
@@ -50,7 +50,7 @@ public class FileDestination: BaseDestination {
         if let baseURL = baseURL {
             logFileURL = baseURL.appendingPathComponent("swiftybeaver.log", isDirectory: false)
         }
-        super.init()
+        super.init(label)
 
         // bash font color, first value is intensity, second is color
         // see http://bit.ly/1Otu3Zr & for syntax http://bit.ly/1Tp6Fw9

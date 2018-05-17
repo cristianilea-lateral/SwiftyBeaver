@@ -35,6 +35,14 @@ open class SwiftyBeaver {
         if destinations.contains(destination) {
             return false
         }
+        
+        // Check for duplicate deetinations with the same label.
+        for dest in destinations {
+            if let label = dest.label, label == destination.label {
+                return false
+            }
+        }
+        
         destinations.insert(destination)
         return true
     }

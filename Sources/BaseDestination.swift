@@ -83,7 +83,7 @@ open class BaseDestination: Hashable, Equatable {
     var queue: DispatchQueue? //dispatch_queue_t?
     var debugPrint = false // set to true to debug the internal filter logic of the class
 
-    private let label: String?
+    let label: String?
 
     public init(_ label: String? = nil) {
         self.label = label

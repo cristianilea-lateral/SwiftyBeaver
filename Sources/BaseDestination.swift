@@ -103,7 +103,7 @@ open class BaseDestination: Hashable, Equatable {
     }
 
     func isMatch(_ destination: String?) -> Bool {
-        return label == destination || ConsoleDestinationConstant == destination
+        return label == destination || label == ConsoleDestinationConstant
     }
     
     /// send / store the formatted log message to the destination

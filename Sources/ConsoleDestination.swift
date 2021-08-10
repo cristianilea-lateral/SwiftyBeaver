@@ -9,6 +9,8 @@
 
 import Foundation
 
+public let ConsoleDestinationConstant = "ConsoleDestination"
+
 public class ConsoleDestination: BaseDestination {
 
     /// use NSLog instead of print, default is false
@@ -41,7 +43,7 @@ public class ConsoleDestination: BaseDestination {
 
     override public var defaultHashValue: Int { return 1 }
 
-    public override init(_ label: String? = nil) {
+    public override init(_ label: String? = ConsoleDestinationConstant) {
         super.init(label)
         levelColor.verbose = "💜 "     // silver
         levelColor.debug = "💚 "        // green

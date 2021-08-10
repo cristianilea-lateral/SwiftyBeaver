@@ -11,9 +11,9 @@ public final class GoogleCloudDestination: BaseDestination {
 
     private let serviceName: String
 
-    public init(serviceName: String) {
+    public init(_ label: String? = nil, serviceName: String) {
         self.serviceName = serviceName
-        super.init()
+        super.init(label)
     }
 
     override public var asynchronously: Bool {

@@ -72,7 +72,7 @@ open class BaseDestination: Hashable, Equatable {
 
     var reset = ""
     var escape = ""
-
+    
     var filters = [FilterType]()
     let formatter = DateFormatter()
     let startDate = Date()
@@ -93,12 +93,19 @@ open class BaseDestination: Hashable, Equatable {
     var queue: DispatchQueue? //dispatch_queue_t?
     var debugPrint = false // set to true to debug the internal filter logic of the class
 
-    public init() {
+    let label: String?
+
+    public init(_ label: String? = nil) {
+        self.label = label
         let uuid = NSUUID().uuidString
         let queueLabel = "swiftybeaver-queue-" + uuid
         queue = DispatchQueue(label: queueLabel, target: queue)
     }
 
+    func isMatch(_ destination: String?) -> Bool {
+        return label == destination
+    }
+    
     /// send / store the formatted log message to the destination
     /// returns the formatted log message for processing by inheriting method
     /// and for unit tests (nil if error)

@@ -41,8 +41,8 @@ public class ConsoleDestination: BaseDestination {
 
     override public var defaultHashValue: Int { return 1 }
 
-    public override init() {
-        super.init()
+    public override init(_ label: String? = nil) {
+        super.init(label)
         levelColor.verbose = "💜 "     // silver
         levelColor.debug = "💚 "        // green
         levelColor.info = "💙 "         // blue

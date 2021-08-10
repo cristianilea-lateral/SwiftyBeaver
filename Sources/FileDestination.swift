@@ -48,8 +48,7 @@ open class FileDestination: BaseDestination {
     override public var defaultHashValue: Int {return 2}
     let fileManager = FileManager.default
 
-
-    public init(logFileURL: URL? = nil) {
+    public init(_ label: String? = nil, logFileURL: URL? = nil) {
         if let logFileURL = logFileURL {
             self.logFileURL = logFileURL
             super.init()
@@ -88,7 +87,8 @@ open class FileDestination: BaseDestination {
         if let baseURL = baseURL {
             self.logFileURL = baseURL.appendingPathComponent("swiftybeaver.log", isDirectory: false)
         }
-        super.init()
+
+        super.init(label)
     }
 
     // append to file. uses full base class functionality

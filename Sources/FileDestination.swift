@@ -51,7 +51,7 @@ open class FileDestination: BaseDestination {
     public init(_ label: String? = nil, logFileURL: URL? = nil) {
         if let logFileURL = logFileURL {
             self.logFileURL = logFileURL
-            super.init()
+            super.init(label)
             return
         }
 

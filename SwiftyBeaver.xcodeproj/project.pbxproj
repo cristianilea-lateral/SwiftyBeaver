@@ -337,6 +337,7 @@
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
 					"DEBUG=1",
+					"SWIFTBEAVER_SUPPORTS_DESTINATIONS=1",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				ONLY_ACTIVE_ARCH = YES;
@@ -362,6 +363,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"SWIFT_PACKAGE=1",
+					"SWIFTBEAVER_SUPPORTS_DESTINATIONS=1",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_SWIFT_FLAGS = "$(inherited) -DXcode";

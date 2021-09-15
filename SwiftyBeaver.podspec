@@ -24,6 +24,6 @@ Great for development & release due to its support for many logging destinations
   s.source       = { :git => "https://github.com/SwiftyBeaver/SwiftyBeaver.git", :tag => "1.9.5" }
   s.source_files  = "Sources"
   s.swift_versions = ['4.0', '4.2', '5.0', '5.1']
-  s.pod_target_xcconfig = {'SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=DEBUG]' => '$(inherited) SWIFTBEAVER_SUPPORTS_DESTINATIONS',
-                           'SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=RELEASE]' => '$(inherited) SWIFTBEAVER_SUPPORTS_DESTINATIONS'}
+  s.pod_target_xcconfig = {'SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=DEBUG]' => '$SWIFTBEAVER_SUPPORTS_DESTINATIONS',
+                           'SWIFT_ACTIVE_COMPILATION_CONDITIONS[config=RELEASE]' => '$SWIFTBEAVER_SUPPORTS_DESTINATIONS'}
 end
